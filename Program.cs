@@ -21,11 +21,11 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+
 // seed people data
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-
     SeedPeople.Initialize(services);
 }
 
